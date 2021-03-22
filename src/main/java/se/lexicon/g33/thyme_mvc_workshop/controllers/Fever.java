@@ -14,14 +14,15 @@ public class Fever {
     @GetMapping("/fever")
     public String formInput(Model model) {
 
-        StringBuilder diagnose = new StringBuilder();
+        String diagnose = "";
+
 
         if (temp >= 38){
-            diagnose.append("You have a fever");
+            diagnose = "You have a fever";
         } else if (temp <= 36) {
-            diagnose.append("You have hypothermia");
+            diagnose = "You have hypothermia";
         } else {
-            diagnose.append("You are healthy");
+            diagnose = "You are healthy";
         }
 
         model.addAttribute("diagnose", diagnose);
