@@ -5,10 +5,16 @@
     <title>Contact</title>
 </head>
 <body>
-    <form>
+    <form th:action="@{/contact}" method="post">
         <label>Contact</label>
-        <input type="text" th:method="post">
+        <input type="text" th:method="post" name="input" />
+        <input type="submit" value="Submit" />
     </form>
+
+    <ul th:each="input : ${inputs}">
+        <li><p th:text="${input}"></p></li>
+
+    </ul>
 
 </body>
 </html>
