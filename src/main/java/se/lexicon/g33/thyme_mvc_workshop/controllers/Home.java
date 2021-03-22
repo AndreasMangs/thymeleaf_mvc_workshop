@@ -30,6 +30,9 @@ public class Home {
         return "redirect:/contact";
     }
 
-
+    @GetMapping("/about")
+    public String about(){
+        return "about";
+    }
 
 }
