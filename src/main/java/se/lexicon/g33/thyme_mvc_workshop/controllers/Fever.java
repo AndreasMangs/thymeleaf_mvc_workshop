@@ -12,7 +12,7 @@ public class Fever {
     private double temp = 37;
 
     @GetMapping("/fever")
-    public String formInput(Model model) {
+    public String calculateFever(Model model) {
 
         String diagnose = "";
 
@@ -30,7 +30,9 @@ public class Fever {
         return "fever";
     }
 
-    @PostMapping("/fever")
+
+
+    @PostMapping("/tempcheck")
     public String formInput(@RequestParam("temp") double temp){
         this.temp = temp;
         return "redirect:/fever";
