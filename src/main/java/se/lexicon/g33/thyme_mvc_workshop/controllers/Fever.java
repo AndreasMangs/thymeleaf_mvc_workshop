@@ -25,7 +25,7 @@ public class Fever {
             diagnose = "You are healthy";
         }
 
-        model.addAttribute("diagnose", diagnose);
+        model.addAttribute("diagnose", diagnose.toString());
 
         return "fever";
     }

@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Fever</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
 </head>
 <body>
 
-<form th:action="@{/formInput}" method="post">
+<form th:action="@{/fever}" method="post">
     <label>Temperature checker</label>
     <input type="text" th:method="post" name="temp" />
     <input type="submit" value="Submit" />
